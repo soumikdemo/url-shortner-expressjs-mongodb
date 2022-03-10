@@ -1,0 +1,35 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "URL Shortener",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "npx nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "url shortener",
+    "mongodb",
+    "nodejs"
+  ],
+  "author": "Soumik",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "mongodb": "^3.1.10",
+    "nanoid": "^2.0.1"
+  }
+}
