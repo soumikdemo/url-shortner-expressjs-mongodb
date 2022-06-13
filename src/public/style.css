@@ -16,9 +16,10 @@ padding: 0;
     ========================================================================== */
 
 :root {
---blue: #46ACCA;
+--blue: #1363DF;
 --brown: #D49667;
 --red: #980100;
+--black: #0A1931;
 }
 
 
@@ -47,8 +48,10 @@ border-bottom: 1px solid #ddd;
 }
 
 .page-title {
-margin-bottom: 30px;
-font-size: 70px;
+margin-bottom: 40px;
+font-size: 64px;
+font-family: 'Russo One', sans-serif;
+color: #F77E21;
 }
 
 .submit-button {
@@ -74,8 +77,8 @@ width: 180px;
 height: 40px;
 font-size: 16px;
 font-weight: 700;
-border: 1px solid var(--red);
-background-color: var(--red);
+border: 1px solid var(--blue);
+background-color: var(--blue);
 color: white;
 box-shadow: 0 1px 1px rgba(0,0,0,.04);
 border-radius: 5px;
@@ -91,8 +94,8 @@ max-width: 600px;
 width: 100%;
 border: 1px solid #ddd;
 padding: 20px;
-background-color: #553c2b;
-border: 5px solid #553c2b;
+background-color: #0A1931;
+border: 5px solid #0A1931;
 border-radius: 5px;
 text-align: center;
 }

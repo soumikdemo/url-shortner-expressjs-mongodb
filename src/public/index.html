@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>URL Shortener</title>
+  <title>Smallerlink - URL Shortener</title>
   <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
   <main>
     <section class="form-section">
-      <h1 class="page-title">URL Shortener</h1>
+      <h1 class="page-title">Smallerlink</h1>
       <form class="url-form">
         <input class="url-input" type="url" placeholder="Paste in a link to shorten it"
-        required name="url" autofocus>
+        required name="url" autocomplete="on" autofocus>
         <button type="submit" class="submit-button">Shorten!</button>
       </form>
     </section>

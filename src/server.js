@@ -28,6 +28,26 @@ app.use(express.static(path.join(__dirname, 'public')));        //handling acces
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//const host = '0.0.0.0' || '127.0.0.1';                        //0.0.0.0 for heroku
+app.set('port', process.env.PORT || 4100);
+
+const server = app.listen(app.get('port'), () => {              //host address is skipped
+    console.log(`Express Server running...`);
+
+    /* let url = `http://${server.address().address}:${server.address().port}`;
+    console.log(`Listening at → ${url}`);
+    let command;
+    if (osPlatform === WINDOWS_PLATFORM) {command = `start chrome ${url}`;} 
+    else if (osPlatform === MAC_PLATFORM) {command = `open -a "Google Chrome" ${url}`;} 
+    else {command = `google-chrome ${url}`;} 
+    //opening url on the browser
+    console.log(`executing command, OS: [${command}, ${osPlatform}]`);
+    exec(command); */
+});
+
+
+
+//db config
 const databaseUrl = process.env.DATABASE;
 MongoClient.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(client => { app.locals.db = client.db('shortener'); })
@@ -51,22 +71,6 @@ const shortenURL = (db, url) => {
         }
     );
 };
-
-app.set('port', process.env.PORT || 4100);
-const server = app.listen(app.get('port'), "127.0.0.1", () => {
-    let url = `http://${server.address().address}:${server.address().port}`;
-    console.log(`Express Server running...`);
-    console.log(`Listening at → ${url}`);
-    
-    /* let command;
-    if (osPlatform === WINDOWS_PLATFORM) {command = `start chrome ${url}`;} 
-    else if (osPlatform === MAC_PLATFORM) {command = `open -a "Google Chrome" ${url}`;} 
-    else {command = `google-chrome ${url}`;} 
-    //opening url on the browser
-    console.log(`executing command, OS: [${command}, ${osPlatform}]`);
-    exec(command); */
-});
-
 
 
 //routes
